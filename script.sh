@@ -39,6 +39,13 @@ case $1 in
     install
     echo -n "Starting up containers"
     docker-compose up -d
+
+    #user input for site name
+    read -p "Enter the site name:" site_name
+
+    #add /etc/hosts entry
+    sudo -- sh -c -e "echo '127.0.0.1 $site_name' >> /etc/hosts"
+    echo -n "Open http://$site_name"
     ;;
 
   stop)
