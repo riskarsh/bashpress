@@ -6,34 +6,35 @@ Make the file `script.sh` executable using the command:
 $ chmod +x script.sh
 ```
 ## Build the site
- 
-### To create a WordPress site
-```bash
-$ ./script.sh
-``` 
-### To start the container/site
+
+
+To start the container/site
 ```bash
 $ ./script.sh start
 ```
+Provide the site name 
 
 
 ## Bring up WordPress in a web Browser
-### At this point, WordPress should be running on port 80 of your Host, and you can complete the "famous five-minute installation" as a WordPress administrator.
+
+At this point, WordPress should be running on port 80 of your Host, and you can complete the "famous five-minute installation" as a WordPress administrator.
 
 > **Note:** The WordPress site is not immediately available on port 80 because the containers are still being initialized and may take a couple of minutes before the first load.
 
-### You can use `http://localhost` as the IP address, and open `http://localhost:80` in a web browser.
+ You can use `http://localhost` as the IP address, and open `http://localhost:80` in a web browser.
 
-![Choose language for WordPress install] (images/wordpress_lang.png)
+![Choose language for WordPress install](images/wordpress_lang.png)
 
-![WordPress Welcome] (images/wordpress_welcome.png)
+![WordPress Welcome](images/wordpress_welcome.png)
 
 ## Shutdown and cleanup
-### To stop the container/site
+
+To stop the container/site
 ```bash
 $ ./script.sh stop
 ```
-### To delete the container/site
+
+To delete the container/site
 ```bash
 $ ./script.sh delete
 ```
