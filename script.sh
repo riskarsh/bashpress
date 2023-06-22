@@ -37,27 +37,27 @@ case $1 in
 
   start)
     install
-    echo -n "Starting up containers"
-    docker-compose up -d
+    echo "Starting up containers"
+    sudo docker-compose up -d
 
     #user input for site name
     read -p "Enter the site name:" site_name
 
     #add /etc/hosts entry
     sudo -- sh -c -e "echo '127.0.0.1 $site_name' >> /etc/hosts"
-    echo -n "Open http://$site_name"
+    echo "Open http://$site_name "
     ;;
 
   stop)
-    echo -n "Stopping containers"
-    docker-compose stop
+    echo "Stopping containers"
+    sudo docker-compose stop
     ;;
 
   delete)
-    echo -n "Deleting the container"
-    docker-compose down
+    echo "Deleting the container"
+    sudo docker-compose down
     ;;
   *)
-    echo -n "Invalid command. Usage: start, stop, delete"
+    echo "Invalid command. Usage: start, stop, delete"
     ;;
 esac
