@@ -50,12 +50,12 @@ case $1 in
 
   stop)
     echo -n "Stopping containers"
-    docker-compose down
+    docker-compose stop
     ;;
 
   delete)
     echo -n "Deleting the container"
-    docker-compose rm
+    docker-compose down
     ;;
   *)
     echo -n "Invalid command. Usage: start, stop, delete"
